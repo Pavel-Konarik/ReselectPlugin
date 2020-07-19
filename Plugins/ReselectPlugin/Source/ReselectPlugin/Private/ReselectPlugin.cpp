@@ -22,7 +22,7 @@ void FReselectPluginModule::OnPieEvent(const bool bSimulate)
 {
 	if (GEditor) {
 		USelection* Selection = GEditor->GetSelectedActors();
-		for (int32 i = 0; i < Selection->Num(); ++i)
+		for (int32 i = 0; i < Selection->Num(); i++)
 		{
 			AActor* SelectedActor = Cast<AActor>(Selection->GetSelectedObject(i));
 			if (IsValid(SelectedActor)) {
@@ -37,7 +37,7 @@ void FReselectPluginModule::OnPieEnd(const bool bSimulate)
 	if (GEditor) {
 		TArray<AActor*> ValidActors;
 
-		for (int32 i = 0; i < SelectedActors.Num(); ++i)
+		for (int32 i = 0; i < SelectedActors.Num(); i++)
 		{
 			if(IsValid(SelectedActors[i]))
 			{
