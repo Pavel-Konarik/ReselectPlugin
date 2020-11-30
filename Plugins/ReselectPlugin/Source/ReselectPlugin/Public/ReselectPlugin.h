@@ -20,6 +20,6 @@ public:
 	void OnPieEnd(bool a);
 
 private:
-	TArray<AActor*> SelectedActors;
+	TArray<class AActor*> SelectedActors;
 
 };
