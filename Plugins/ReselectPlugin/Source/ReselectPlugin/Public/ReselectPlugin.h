@@ -15,11 +15,21 @@ public:
 
 
 	// Begin PIE delegate
-	void OnPieEvent(bool a);
+	void OnPiePreStart(bool bSimulate);
+	void OnPieEnd(bool bSimulate);
+	void OnEndPlayMap();
 
-	void OnPieEnd(bool a);
+	class FLevelEditorViewportClient* GetFirstActiveLevelViewportClient();
 
 private:
 	TArray<class AActor*> SelectedActors;
+
+
+	FDelegateHandle OnBeginPIEHandle;
+	FDelegateHandle OnEndPIEHandle;
+
+	class FLevelEditorViewportClient* Viewport;
+	FVector StartingViewLocation;
+	FRotator StartingViewRotation;
 
 };

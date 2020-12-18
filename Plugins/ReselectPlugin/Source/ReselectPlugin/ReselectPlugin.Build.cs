@@ -39,6 +39,7 @@ public class ReselectPlugin : ModuleRules
 				"Slate",
 				"SlateCore",
 				"UnrealEd",
+				"LevelEditor"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
