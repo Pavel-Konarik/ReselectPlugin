@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright Cybertooth Studio LLC. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -39,7 +39,9 @@ public class ReselectPlugin : ModuleRules
 				"Slate",
 				"SlateCore",
 				"UnrealEd",
-				"LevelEditor"
+				"LevelEditor",
+				"EditorStyle",
+				
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
